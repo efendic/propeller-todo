@@ -1,0 +1,13 @@
+<button mat-button [routerLink]="['/add']">Add</button>
+<button mat-button (click)="toggleFilterIsDone(true)">Done</button>
+<button mat-button  (click)="toggleFilterIsDone(false)">Un-Done</button>
+<button mat-button  (click)="toggleFilterIsDone(null)">All</button>
+
+<ul>
+  <li *ngFor="let todo of todos">
+    {{todo.name}}
+    <button (click)="removeTodo(todo)" class="deleteBtn">Delete</button>
+    <button *ngIf="!todo.isDone" (click)="toggleIsDone(todo)" class="unDoneBtn">Un-done</button>
+    <button *ngIf="todo.isDone" (click)="toggleIsDone(todo)" class="doneBtn">Done</button>
+  </li>
+</ul>

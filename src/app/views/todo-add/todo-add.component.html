@@ -1,0 +1,9 @@
+<a routerLink="/list">List</a>
+<fieldset>
+    <legend>Add Todo</legend>
+    <label for="name">
+        Name
+    </label>
+    <input [(ngModel)]="name">
+    <button (click)="addTodo()">Add</button>
+</fieldset>
