@@ -7,7 +7,6 @@ import {addToList} from '../../helpers/util'
 })
 
 export class TodoAddComponent {
-    //TODO: use FormBuilder, link : https://angular.io/api/forms/FormBuilder
     name: string;
 
     addTodo() {        

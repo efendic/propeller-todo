@@ -11,28 +11,24 @@ export const addToList = name => {
     let todo: ITodo = {
         _id: list.length,
         name: name,
-        isDone:false
+        isDone: false
     }
     list.push(todo);
     updateTodoListStorage(list);
 }
 
 export const removeFromList = (todo: ITodo) => {
-    let list = <ITodo[]>getList();    
+    let list = <ITodo[]>getList();
     let i = list.findIndex(x => x._id == todo._id);
-    if (i) {
-        list.splice(i, 1);
-        updateTodoListStorage(list);
-    }
+    list.splice(i, 1);
+    updateTodoListStorage(list);
 }
 
 export const updateTodo = (todo: ITodo) => {
-    let list = <ITodo[]>getList();    
+    let list = <ITodo[]>getList();
     let i = list.findIndex(x => x._id == todo._id);
-    if (i) {
         list[i] = todo;
         updateTodoListStorage(list);
-    }
 }
 
 //TODO: dodati tip koji funkcija vraca a treba biti array ITodo

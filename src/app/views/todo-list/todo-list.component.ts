@@ -9,6 +9,7 @@ import { getList, removeFromList, updateTodo } from '../../helpers/util'
     //   styleUrls: ['todo-list.scss']
 })
 export class TodoListComponent implements OnInit {
+
     todos: ITodo[];
     filterIsDone?: boolean;
 
