@@ -1,10 +1,10 @@
 <button mat-button [routerLink]="['/list']">List</button>
 <fieldset>
     <legend>Add Todo</legend>
-    <label for="name">
-        Name
-    </label>
-    <input [(ngModel)]="name">
-    
+
+    <mat-form-field>
+        <input matInput [(ngModel)]="name">
+    </mat-form-field>
+
     <button mat-stroked-button color="primary" (click)="addTodo()">Add</button>
 </fieldset>

@@ -7,6 +7,7 @@ import { MatMenuModule } from '@angular/material/menu';
 import { MatButtonModule } from '@angular/material/button';
 import { MatToolbarModule, MatCardModule, MatGridListModule } from '@angular/material';
 import { MatDividerModule } from '@angular/material/divider';
+import { MatInputModule } from '@angular/material/input';
 
 import { AppComponent } from './app.component';
 
@@ -30,6 +31,7 @@ import { TodoListComponent } from './views/todo-list/todo-list.component';
     MatCardModule,
     MatGridListModule,
     MatDividerModule,
+    MatInputModule,
 
     RouterModule.forRoot([
       // Home Page

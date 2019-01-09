@@ -18,11 +18,11 @@
     <mat-grid-list [cols]="breakpoint" rowHeight="2:0.5" (window:resize)="onResize($event)">
       <mat-grid-tile colspan="2">{{todo.name}}</mat-grid-tile>
       <mat-grid-tile>
-        <button mat-stroked-button color="warn" (click)="removeTodo(todo)" class="deleteBtn">Delete</button>
-      </mat-grid-tile>
-      <mat-grid-tile>
         <button mat-stroked-button *ngIf="!todo.isDone" (click)="toggleIsDone(todo)" class="unDoneBtn">Undone</button>
         <button mat-stroked-button color="primary" *ngIf="todo.isDone" (click)="toggleIsDone(todo)" class="doneBtn">Done</button>
+      </mat-grid-tile>
+      <mat-grid-tile>
+        <button mat-stroked-button color="warn" (click)="removeTodo(todo)" class="deleteBtn">Delete</button>
       </mat-grid-tile>
     </mat-grid-list>
   </li>
